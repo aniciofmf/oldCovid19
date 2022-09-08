@@ -1,0 +1,75 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "@typescript-eslint"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".json",
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".ts",
+            ".tsx"
+          ]
+        }
+      ],
+      "semi": [
+        2,
+        "never"
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ],
+      "react/button-has-type": ["error", {"reset": true}],
+      "no-unused-vars": ["warn"],
+      "max-len": [2, { "code": 200 , "ignoreStrings": true}],
+      "jsx-a11y/no-static-element-interactions": 0,
+      "jsx-a11y/no-noninteractive-element-interactions":0,
+      "jsx-a11y/click-events-have-key-events":0,
+      "react/jsx-key": [2, { "checkFragmentShorthand": false }],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ]
+    }
+  }
